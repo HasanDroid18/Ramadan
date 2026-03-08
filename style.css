@@ -89,7 +89,7 @@ body {
     position: absolute;
     top: clamp(60px, 15vh, 200px);
     right: clamp(20px, 12vw, 200px);
-    font-size: clamp(1.8rem, 5vw, 5rem);
+    font-size: clamp(1.4rem, 4vw, 5rem);
     font-weight: bold;
     color: gold;
     font-family: 'Aref Ruqaa', sans-serif;
@@ -104,12 +104,12 @@ body {
 .fanous.on .crescent-moon,
 .fanous.on .star {
     opacity: 1;
-    transform: translateY(150px);
+    transform: translateY(clamp(80px, 15vh, 150px));
 }
 
 .fanous.on .ramadan-text {
     opacity: 1;
-    transform: translateY(150px);
+    transform: translateY(clamp(80px, 15vh, 150px));
 }
 
 @keyframes float {
@@ -1061,7 +1061,7 @@ body {
 /* Mobile phones */
 @media (max-width: 480px) {
     .animation-container {
-        top: clamp(12px, 5vh, 50px);
+        top: clamp(10px, 4vh, 50px);
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -1075,24 +1075,37 @@ body {
         gap: 3px;
     }
     .ramadan-text {
-        top: auto;
-        bottom: clamp(16px, 6vh, 60px);
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        text-align: center;
+        top: clamp(10px, 4vh, 50px);
+        right: clamp(8px, 4vw, 40px);
+        left: auto;
+        max-width: 38vw;
+        font-size: clamp(1.1rem, 5.5vw, 2rem);
+        line-height: 1.4;
         text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
     }
-    /* Keep fanous centered and scaled */
+    /* Fix fanous scaling — corrected --_factor typo */
     .fanous {
-        --_factor: min(400px, 80vh);
-        --_size: min(var(----_factor), 88vw);
+        --_factor: min(420px, 78vh);
+        --_size: min(var(--_factor), 86vw);
+    }
+    /* Scale down translateY on small screens */
+    .fanous.on .crescent-moon,
+    .fanous.on .star {
+        transform: translateY(clamp(50px, 10vh, 100px));
+    }
+    .fanous.on .ramadan-text {
+        transform: translateY(clamp(50px, 10vh, 100px));
     }
 }
 
 /* Very small phones */
 @media (max-width: 360px) {
     .ramadan-text {
-        font-size: clamp(1.2rem, 8vw, 1.8rem);
+        font-size: clamp(1rem, 6vw, 1.5rem);
+        max-width: 36vw;
+    }
+    .fanous {
+        --_factor: min(360px, 75vh);
+        --_size: min(var(--_factor), 84vw);
     }
 }

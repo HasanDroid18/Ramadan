@@ -1,6 +1,6 @@
 function getTranslateY() {
-    if (window.innerWidth <= 480) return "0px";
-    if (window.innerWidth <= 768) return "80px";
+    if (window.innerWidth <= 480) return "70px";
+    if (window.innerWidth <= 768) return "100px";
     return "150px";
 }
 

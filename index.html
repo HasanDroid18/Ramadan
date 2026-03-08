@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="animation-container">
+    <img src="./b2ac494d85f20e7cd7ca3e5623d255cc.png" class="crescent-moon" alt="هلال">
+</div>
+<div class="stars">
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+</div>
+
+<div class="ramadan-text"> رمضان كريم رغوة</div>
+
+
+
+    <svg id="noise-svg">
+        <filter id='noiseFilter'>
+            <feTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='3' stitchTiles='stitch' />
+        </filter>
+        <rect id="noise-rect" filter='url(#noiseFilter)' />
+    </svg>
+    
+    <div class="fanous off">
+        <div class="shadow"></div>
+    
+        <div class="base-container"><div class="base"><div></div></div></div>
+        <div class="small-outer-pipe">
+            <div class="small-inner-pipe"></div>
+        </div>
+        <div class="outer-pipe">
+            <div class="inner-pipe"></div>
+        </div>
+        
+        <div class="light-bulb">
+            <div class="bulb-glass"></div>
+            <div class="bulb-base"></div>
+            <div class="bulb-filament"></div>
+        </div>
+      
+        <div class="glass-tube"></div>
+        <div class="overlay"></div>
+    
+        <div class="tube-base-container">
+            <div class="wires"><div></div><div></div></div>
+            <div class="tube-base"></div>
+            <div class="rods">
+                <div class="left-rod"></div>
+                <div class="center-rod"></div>
+                <div class="right-rod"></div>
+            </div>
+            <div class="tube-btm"></div>
+        </div>
+    
+        <div class="power-cord">
+            <div></div>
+            <div></div>
+        </div>
+        
+        <div class="button" onclick="toggleLights()">
+            <div></div>
+        </div> 
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
